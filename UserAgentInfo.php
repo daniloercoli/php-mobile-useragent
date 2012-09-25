@@ -9,6 +9,7 @@ class UserAgentInfo {
 	const PLATFORM_IPOD 			= 'ipod';
 	const PLATFORM_IPAD 			= 'ipad';
 	const PLATFORM_BLACKBERRY 		= 'blackberry';
+	const PLATFORM_BLACKBERRY_10    = 'blackberry_10';
 	const PLATFORM_SYMBIAN			= 'symbian_series60';
 	const PLATFORM_SYMBIAN_S40		= 'symbian_series40';
 	const PLATFORM_J2ME_MIDP		= 'j2me_midp';
@@ -51,6 +52,8 @@ class UserAgentInfo {
 	   		return 'android_tablet';
 	   	elseif ( $this->is_android() )
 	   		return 'android';
+	   	elseif ( $this->is_blackberry_10() )
+	   	    return 'blackberry_10';
 	   	elseif ( $this->is_blackbeberry() )
 	   		return 'blackberry';
 	   	elseif ( $this->is_WindowsPhone7() )
@@ -139,6 +142,9 @@ class UserAgentInfo {
    	}
     elseif ( $this->is_kindle_fire() ) {
    		$this->_platform = self::PLATFORM_ANDROID_TABLET;
+   	}
+   	elseif ( $this->is_blackberry_10() ) {
+       $this->_platform = self::PLATFORM_BLACKBERRY_10;
    	}
    	elseif ( strpos( $this->useragent, 'blackberry' ) !== false ) {
    		$this->_platform = self::PLATFORM_BLACKBERRY;
@@ -697,6 +703,15 @@ class UserAgentInfo {
 		}
 	}
 	
+	
+	/*
+	 is_blackberry_10() can be used to check the User Agent for a BlackBerry 10 device.
+	*/
+	function is_blackberry_10() {
+		$agent = strtolower( $_SERVER['HTTP_USER_AGENT'] );
+		return ( strpos( $agent, 'bb10' ) !== false ) && ( strpos( $agent, 'mobile' ) !== false );
+	}
+	
 	/*
 	 is_blackbeberry() can be used to check the User Agent for a blackberry device
 	 Note that opera mini on BB matches this rule.
@@ -723,6 +738,7 @@ class UserAgentInfo {
 	 * Retrieve the blackberry OS version.
 	 *
 	 * Return strings are from the following list:
+	 * - blackberry-10;
 	 * - blackberry-7
 	 * - blackberry-6
 	 * - blackberry-torch //only the first edition. The 2nd edition has the OS7 onboard and doesn't need any special rule.
@@ -738,7 +754,10 @@ class UserAgentInfo {
 
 		if ( empty( $_SERVER['HTTP_USER_AGENT'] ) )
 			return false;
-	
+
+		if ( self::is_blackberry_10() )
+			return 'blackberry-10';
+		
 		$agent = strtolower( $_SERVER['HTTP_USER_AGENT'] );
 	
 		$pos_blackberry = stripos( $agent, 'blackberry' );
@@ -804,6 +823,7 @@ class UserAgentInfo {
 	 * Retrieve the blackberry browser version.  
 	 * 
 	 * Return string are from the following list: 
+	 * - blackberry-10
 	 * - blackberry-webkit
 	 * - blackberry-5
 	 * - blackberry-4.7
@@ -819,6 +839,9 @@ class UserAgentInfo {
 
 		$agent = strtolower( $_SERVER['HTTP_USER_AGENT'] );
 
+		if ( self::is_blackberry_10() )
+			return 'blackberry-10';
+		
 		$pos_blackberry = strpos( $agent, 'blackberry' );
 		if ( $pos_blackberry === false ) { 
 			//not a blackberry device

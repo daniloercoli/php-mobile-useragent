@@ -50,6 +50,11 @@ $UAs['BlackBerry OS 6.0.0.546'] = array (
 								'platform' => 'blackberry',
 								'user_agent_name' => 'blackberry',
 );
+$UAs['BlackBerry 10'] = array (
+		'user_agent_string' => 'Mozilla/5.0 (BB10; <Device Model>) AppleWebKit/<WebKit Version> (KHTML, like Gecko) Version/<BB Version #> Mobile Safari/<WebKit Version>',
+		'platform' => 'blackberry_10',
+		'user_agent_name' => 'blackberry_10',
+);
 $UAs['iPad iOS 3.2'] = array (
 								'user_agent_string' => 'Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10',
 								'platform' => 'ipad',
