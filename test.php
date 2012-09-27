@@ -103,42 +103,47 @@ $UAs['Chrome for iOS'] = array (
 );
 
 //iOS Apps 
-$UAs['Facebook for iPhone'] = array (
-								'user_agent_string' => 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 5_0 like Mac OS X; en_US) AppleWebKit (KHTML, like Gecko) Mobile [FBAN/FBForIPhone;FBAV/4.0.2;FBBV/4020.0;FBDV/iPhone3,1;FBMD/iPhone;FBSN/iPhone OS;FBSV/5.0;FBSS/2; FBCR/O2;FBID/phone;FBLC/en_US;FBSF/2.0]',
-								'platform' => 'iphone',
-								'user_agent_name' => 'facebook-for-iphone',
-);
-$UAs['Facebook for iPhone new version'] = array (
-		'user_agent_string' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Mobile/9B206 [FBAN/FBIOS;FBAV/5.0;FBBV/47423;FBDV/iPhone3,1;FBMD/iPhone;FBSN/iPhone OS;FBSV/5.1.1;FBSS/2; FBCR/3ITA;FBID/phone;FBLC/en_US]',
-		'platform' => 'iphone',
-		'user_agent_name' => 'facebook-for-iphone',
-);
-$UAs['Facebook 4020 for iPhone'] = array (
+$UAs['Facebook 4020 for iPhone - a very old version'] = array (
 								'user_agent_string' => 'Facebook 4020.0 (iPhone; iPhone OS 5.0.1; fr_FR)',
 								'platform' => 'iphone',
 								'user_agent_name' => 'facebook-for-iphone',
 );
-$UAs['Facebook for iPad'] = array (
+$UAs['Facebook for iPhone v4.X'] = array (
+								'user_agent_string' => 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 5_0 like Mac OS X; en_US) AppleWebKit (KHTML, like Gecko) Mobile [FBAN/FBForIPhone;FBAV/4.0.2;FBBV/4020.0;FBDV/iPhone3,1;FBMD/iPhone;FBSN/iPhone OS;FBSV/5.0;FBSS/2; FBCR/O2;FBID/phone;FBLC/en_US;FBSF/2.0]',
+								'platform' => 'iphone',
+								'user_agent_name' => 'facebook-for-iphone',
+);
+$UAs['Facebook for iPhone v5.0 or higher'] = array (
+		'user_agent_string' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Mobile/9B206 [FBAN/FBIOS;FBAV/5.0;FBBV/47423;FBDV/iPhone3,1;FBMD/iPhone;FBSN/iPhone OS;FBSV/5.1.1;FBSS/2; FBCR/3ITA;FBID/phone;FBLC/en_US]',
+		'platform' => 'iphone',
+		'user_agent_name' => 'facebook-for-iphone',
+);
+$UAs['Facebook for iPad old version'] = array (
 								'user_agent_string' => 'Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Mobile/10A403 [FBAN/FBIOS;FBAV/5.0;FBBV/47423;FBDV/iPad2,1;FBMD/iPad;FBSN/iPhone OS;FBSV/6.0;FBSS/1; FBCR/;FBID/tablet;FBLC/en_US]',
 								'platform' => 'ipad',
 								'user_agent_name' => 'facebook-for-ipad',
 );
-$UAs['Facebook for iPad new version'] = array (
+$UAs['Facebook for iPad v5.0 or higher'] = array (
 		'user_agent_string' => 'Mozilla/5.0 (iPad; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Mobile/9B206 [FBAN/FBIOS;FBAV/5.0;FBBV/47423;FBDV/iPad2,1;FBMD/iPhone;FBSN/iPhone OS;FBSV/5.1.1;FBSS/2; FBCR/3ITA;FBID/tablet;FBLC/en_US]',
 		'platform' => 'ipad',
 		'user_agent_name' => 'facebook-for-ipad',
 );
+//Twitter
 $UAs['Twitter for iPhone'] = array (
 								'user_agent_string' => 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_5 like Mac OS X; nb-no) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1 Twitter for iPhone',
 								'platform' => 'iphone',
 								'user_agent_name' => 'twitter-for-iphone',
 );
-$UAs['Twitter for iPad'] = array (
+$UAs['Twitter for iPad - v4.X'] = array (
 								'user_agent_string' => 'Mozilla/5.0 (iPad; U; CPU OS 4_3_5 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1 Twitter for iPad',
 								'platform' => 'ipad',
 								'user_agent_name' => 'twitter-for-ipad',
 );
-
+$UAs['Twitter for iPad - v5.0 or higher'] = array (
+		'user_agent_string' => 'Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Mobile/9B206 Twitter for iPhone',
+		'platform' => 'ipad',
+		'user_agent_name' => 'twitter-for-ipad',
+);
 
 //Windows UAs
 $UAs['IE Mobile 9.0'] = array (

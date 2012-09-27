@@ -219,9 +219,9 @@ class UserAgentInfo {
 	}
 	
 	
-	
 	/*
 	 *  Detects if the current UA is Twitter for iPhone
+	 *  
 	 * Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_5 like Mac OS X; nb-no) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1 Twitter for iPhone
 	 * Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Mobile/9B206 Twitter for iPhone
 	 */
@@ -231,6 +231,9 @@ class UserAgentInfo {
 			
 		$ua = strtolower( $_SERVER['HTTP_USER_AGENT'] );
 
+		if ( strpos( $ua, 'ipad' ) !== false )
+			return false;
+		
 		if ( strpos( $ua, 'twitter for iphone' ) !== false )
 			return true;
 		else
@@ -239,7 +242,9 @@ class UserAgentInfo {
 	
 	/*
 	 * Detects if the current UA is Twitter for iPad
-	 * Mozilla/5.0 (iPad; U; CPU OS 4_3_5 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1 Twitter for iPad
+	 * 
+	 * Old version 4.X - Mozilla/5.0 (iPad; U; CPU OS 4_3_5 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1 Twitter for iPad
+	 * Ver 5.0 or Higher - Mozilla/5.0 (iPad; CPU OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Mobile/9B206 Twitter for iPhone 
 	 */
 	function is_twitter_for_ipad( ) {
 		if ( empty( $_SERVER['HTTP_USER_AGENT'] ) )
@@ -248,6 +253,8 @@ class UserAgentInfo {
 		$ua = strtolower( $_SERVER['HTTP_USER_AGENT'] );
 
 		if ( strpos( $ua, 'twitter for ipad' ) !== false )
+			return true;
+		elseif( strpos( $ua, 'ipad' ) !== false && strpos( $ua, 'twitter for iphone' ) !== false )
 			return true;
 		else
 			return false;
