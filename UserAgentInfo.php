@@ -198,6 +198,7 @@ class UserAgentInfo {
 	/*
 	 *  Detects if the current UA is Twitter for iPhone
 	 * Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_5 like Mac OS X; nb-no) AppleWebKit/533.17.9 (KHTML, like Gecko) Mobile/8L1 Twitter for iPhone
+	 * Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Mobile/9B206 Twitter for iPhone
 	 */
 	function is_twitter_for_iphone( ) {
 		if ( empty( $_SERVER['HTTP_USER_AGENT'] ) )
@@ -230,6 +231,7 @@ class UserAgentInfo {
 	/*
 	 * Detects if the current UA is Facebook for iPhone
 	 * - Mozilla/5.0 (iPhone; U; CPU iPhone OS 5_0 like Mac OS X; en_US) AppleWebKit (KHTML, like Gecko) Mobile [FBAN/FBForIPhone;FBAV/4.0.2;FBBV/4020.0;FBDV/iPhone3,1;FBMD/iPhone;FBSN/iPhone OS;FBSV/5.0;FBSS/2; FBCR/O2;FBID/phone;FBLC/en_US;FBSF/2.0]
+	 * - Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Mobile/9B206 [FBAN/FBIOS;FBAV/5.0;FBBV/47423;FBDV/iPhone3,1;FBMD/iPhone;FBSN/iPhone OS;FBSV/5.1.1;FBSS/2; FBCR/3ITA;FBID/phone;FBLC/en_US]
 	 * - Facebook 4020.0 (iPhone; iPhone OS 5.0.1; fr_FR)
 	 */
 	function is_facebook_for_iphone( ) {
@@ -245,6 +247,8 @@ class UserAgentInfo {
 			return true;
 		else if ( strpos( $ua, 'fbforiphone' ) !== false && strpos( $ua, 'tablet' ) === false )
 			return true;
+		else if ( strpos( $ua, 'fban/fbios;' ) !== false && strpos( $ua, 'tablet' ) === false ) //FB app v5.0 or higher
+			return true;
 		else
 			return false;
 	}
@@ -252,6 +256,7 @@ class UserAgentInfo {
 	/*
 	 * Detects if the current UA is Facebook for iPad
 	 * - Mozilla/5.0 (iPad; U; CPU iPhone OS 5_0 like Mac OS X; en_US) AppleWebKit (KHTML, like Gecko) Mobile [FBAN/FBForIPhone;FBAV/4.0.2;FBBV/4020.0;FBDV/iPad2,1;FBMD/iPad;FBSN/iPhone OS;FBSV/5.0;FBSS/1; FBCR/;FBID/tablet;FBLC/en_US;FBSF/1.0]
+	 * - Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Mobile/10A403 [FBAN/FBIOS;FBAV/5.0;FBBV/47423;FBDV/iPad2,1;FBMD/iPad;FBSN/iPhone OS;FBSV/6.0;FBSS/1; FBCR/;FBID/tablet;FBLC/en_US]
 	 * - Facebook 4020.0 (iPad; iPhone OS 5.0.1; en_US)
 	 */
 	function is_facebook_for_ipad( ) {
@@ -263,7 +268,7 @@ class UserAgentInfo {
 		if ( strpos( $ua, 'ipad' ) === false )
 			return false;
 		
-		if ( strpos( $ua, 'facebook' ) !== false || strpos( $ua, 'fbforiphone' ) !== false  )
+		if ( strpos( $ua, 'facebook' ) !== false || strpos( $ua, 'fbforiphone' ) !== false  || strpos( $ua, 'fban/fbios;' ) !== false )
 			return true;
 		else
 			return false;
