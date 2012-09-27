@@ -44,7 +44,9 @@ class UserAgentInfo {
     * @return string The matched User Agent name, false otherwise.
     */
    function get_mobile_user_agent_name() {
-	   	if ( $this->is_iphone_or_ipod( 'iphone-safari' ) )
+   		if(  $this->is_chrome_for_iOS( ) )
+   			return 'chrome-for-ios';
+   		elseif ( $this->is_iphone_or_ipod( 'iphone-safari' ) )
 	 	  	return  'iphone';
 	   	elseif ( $this->is_ipad( 'ipad-safari' ) )
 	   		return 'ipad';
@@ -194,6 +196,29 @@ class UserAgentInfo {
 		else
 			return $is_iphone;
 	}
+	
+	
+	/*
+	 *  Detects if the current UA is Chorme for iOS
+	 *  
+	 *  The User-Agent string in Chrome for iOS is the same as the Mobile Safari User-Agent, with CriOS/<ChromeRevision> instead of Version/<VersionNum>.
+	 *  - Mozilla/5.0 (iPhone; U; CPU iPhone OS 5_1_1 like Mac OS X; en) AppleWebKit/534.46.0 (KHTML, like Gecko) CriOS/19.0.1084.60 Mobile/9B206 Safari/7534.48.3
+	*/
+	function is_chrome_for_iOS( ) {
+		if ( empty( $_SERVER['HTTP_USER_AGENT'] ) )
+			return false;
+			
+		if ( self::is_iphone_or_ipod( 'iphone-safari' ) === false ) return false; 
+		
+		$ua = strtolower( $_SERVER['HTTP_USER_AGENT'] );
+	
+		if ( strpos( $ua, 'crios/' ) !== false )
+			return true;
+		else
+			return false;
+	}
+	
+	
 	
 	/*
 	 *  Detects if the current UA is Twitter for iPhone
