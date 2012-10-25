@@ -146,6 +146,11 @@ $UAs['Twitter for iPad - v5.0 or higher'] = array (
 );
 
 //Windows UAs
+$UAs['WinPhone 8 / IE Mobile 10'] = array (
+		'user_agent_string' => 'Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; ARM; Touch; IEMobile/10.0; <Manufacturer>; <Device> [;<Operator>])',
+		'platform' => 'windows',
+		'user_agent_name' => 'winphone8',
+);
 $UAs['IE Mobile 9.0'] = array (
 								'user_agent_string' => 'Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0)',
 								'platform' => 'windows',
