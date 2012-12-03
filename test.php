@@ -230,29 +230,108 @@ $UAs['Series 60;Opera Mini 5.1.22784'] = array (
 								'user_agent_name' => 'opera-mini',
 );
 
-
-//Symbian S60
-$UAs['SymbianOS/9.4 Series60/5.0 on Nokia NokiaC6-00'] = array (
-								'user_agent_string' => 'NokiaC6-00/10.0.021 (SymbianOS/9.4; Series60/5.0 Mozilla/5.0; Profile/MIDP-2.1 Configuration/CLDC-1.1) AppleWebkit/525 (KHTML, like Gecko) BrowserNG/7.2.6 UNTRUSTED/1.0 3gpp-gba',
-								'platform' => 'symbian_series60',
-								'user_agent_name' => 'series60',
+/* Nokia S60 */
+$UAs['Nokia N90'] = array (
+		'user_agent_string' => 'NokiaN90-1/3.0545.5.1 Series60/2.8 Profile/MIDP-2.0 Configuration/CLDC-1.1',
+		'platform' => 'symbian_series60',
+		'user_agent_name' => 'series60',
 );
-$UAs['SymbianOS/9.3 Series60/3.2 on NokiaC5-00'] = array (
-								'user_agent_string' => 'NokiaC5-00/061.005 (SymbianOS/9.3; U; Series60/3.2 Mozilla/5.0; Profile/MIDP-2.1 Configuration/CLDC-1.1) AppleWebKit/525 (KHTML, like Gecko) Version/3.0 Safari/525 3gpp-gba',
-								'platform' => 'symbian_series60',
-								'user_agent_name' => 'series60',
+$UAs['Nokia N80'] = array (
+		'user_agent_string' => 'NokiaN80-3/1.0552.0.7Series60/3.0Profile/MIDP-2.0Configuration/CLDC-1.1',
+		'platform' => 'symbian_series60',
+		'user_agent_name' => 'series60',
+);
+$UAs['Nokia7610'] = array (
+		'user_agent_string' => 'Nokia7610/2.0 (5.0509.0) SymbianOS/7.0s Series60/2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0',
+		'platform' => 'symbian_series60',
+		'user_agent_name' => 'series60',
+);
+$UAs['Nokia3650/1.0'] = array (
+		'user_agent_string' => 'Nokia3650/1.0 SymbianOS/6.1 Series60/1.2 Profile/MIDP-1.0 Configuration/CLDC-1.0',
+		'platform' => 'symbian_series60',
+		'user_agent_name' => 'series60',
 );
 $UAs['SymbianOS/9.1 Series60/3.0 on Samsung'] = array (
-								'user_agent_string' => 'SamsungI8910/SymbianOS/9.1 Series60/3.0',
-								'platform' => 'symbian_series60',
-								'user_agent_name' => 'series60',
+		'user_agent_string' => 'SamsungI8910/SymbianOS/9.1 Series60/3.0',
+		'platform' => 'symbian_series60',
+		'user_agent_name' => 'series60',
 );
 $UAs['SymbianOS/9.1 Series60/3.0 on Nokia'] = array (
-								'user_agent_string' => 'NokiaE52-1/SymbianOS/9.1 Series60/3.0 3gpp-gba',
-								'platform' => 'symbian_series60',
-								'user_agent_name' => 'series60',
+		'user_agent_string' => 'NokiaE52-1/SymbianOS/9.1 Series60/3.0 3gpp-gba',
+		'platform' => 'symbian_series60',
+		'user_agent_name' => 'series60',
 );
 
+
+//S60 3rd Edition - OSS Browser 3.0 (Web browser) 
+$UAs['S60 3rd Edition - OSS Browser 3.0 (Web browser) '] = array (
+		'user_agent_string' => 'Mozilla/5.0 (SymbianOS/9.1; U; [en]; Series60/3.0 NokiaE60/4.06.0) AppleWebKit/413 (KHTML, like Gecko) Safari/413',
+		'platform' => 'symbian_series60',
+		'user_agent_name' => 'series60',
+);
+
+//S60 3rd Edition Feature Pack 1 - OSS Browser 3.1
+$UAs[' S60 3rd Edition Feature Pack 1 (OSS 3.1)'] = array (
+		'user_agent_string' => 'Mozilla/5.0 (SymbianOS/9.2; U; Series60/3.1 NokiaXxx/1.0; Profile/MIDP-2.0 Configuration/CLDC-1.1) AppleWebKit/413 (KHTML, like Gecko) Safari/413',
+		'platform' => 'symbian_series60',
+		'user_agent_name' => 'series60',
+);
+
+//S60 3rd Edition Feature Pack 2
+$UAs[' OSS Browser 3.2 on E75'] = array (
+		'user_agent_string' => 'Mozilla/5.0 (SymbianOS/9.3; U; Series60/3.2 NokiaE75-1/110.48.125 Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko) Safari/413',
+		'platform' => 'symbian_series60',
+		'user_agent_name' => 'series60',
+);
+
+$UAs['(OSS Browser 3.2) SymbianOS/9.3 Series60/3.2 on NokiaC5-00'] = array (
+		'user_agent_string' => 'NokiaC5-00/061.005 (SymbianOS/9.3; U; Series60/3.2 Mozilla/5.0; Profile/MIDP-2.1 Configuration/CLDC-1.1) AppleWebKit/525 (KHTML, like Gecko) Version/3.0 Safari/525 3gpp-gba',
+		'platform' => 'symbian_series60',
+		'user_agent_name' => 'series60',
+);
+
+
+
+/* S60 5th Edition */
+
+//Browser 7.0 is used on 5800 XpressMusic, 5530 XpressMusic and Nokia 5230.
+$UAs['S60 5th Edition - 7.0 Browser (Nokia 5800 XpressMusic (v21.0.025))'] = array (
+		'user_agent_string' => 'Mozilla/5.0 (SymbianOS/9.4; U; Series60/5.0 Nokia5800d-1/21.0.025; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko) Safari/413',
+		'platform' => 'symbian_series60',
+		'user_agent_name' => 'series60',
+);
+
+$UAs['S60 5th Edition - SymbianOS/9.4 Series60/5.0 on Nokia NokiaC6-00'] = array (
+		'user_agent_string' => 'NokiaC6-00/10.0.021 (SymbianOS/9.4; Series60/5.0 Mozilla/5.0; Profile/MIDP-2.1 Configuration/CLDC-1.1) AppleWebkit/525 (KHTML, like Gecko) BrowserNG/7.2.6 UNTRUSTED/1.0 3gpp-gba',
+		'platform' => 'symbian_series60',
+		'user_agent_name' => 'series60',
+);
+
+//7.1 Browser is used by N97, N97-mini and various 3.2.3 devices
+$UAs['S60 5th Edition - Nokia N97 (v12.0.024) - Browser 7.1'] = array (
+		'user_agent_string' => 'Mozilla/5.0 (SymbianOS/9.4; Series60/5.0 NokiaN97-1/12.0.024; Profile/MIDP-2.1 Configuration/CLDC-1.1; en-us) AppleWebKit/525 (KHTML, like Gecko) BrowserNG/7.1.12344',
+		'platform' => 'symbian_series60',
+		'user_agent_name' => 'series60',
+);
+
+
+/* Nokia Symbian S^3 */
+
+$UAs['Symbian S^3 - Nokia N8 v13.016 - Browser 7.2'] = array ( //Browser 7.2 is built in browser for Symbian^3 devices.
+		'user_agent_string' => 'Mozilla/5.0 (Symbian/3; Series60/5.2 NokiaN8-00/013.016; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/525 (KHTML, like Gecko) Version/3.0 BrowserNG/7.2.8.10 3gpp-gba',
+		'platform' => 'symbian_series60',
+		'user_agent_name' => 'series60',
+);
+$UAs['Symbian S^3 - Nokia N8 - Browser 7.3'] = array ( //Browser 7.3 is part of Symbian Anna refresh.
+		'user_agent_string' => 'Mozilla/5.0 (Symbian/3; Series60/5.2 NokiaN8-00/012.002; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/533.4 (KHTML, like Gecko) NokiaBrowser/7.3.0 Mobile Safari/533.4 3gpp-gba',
+		'platform' => 'symbian_series60',
+		'user_agent_name' => 'series60',
+);
+$UAs['Symbian S^3 - Nokia N701 - Browser 7.4'] = array ( //Browser 7.4 is part of Symbian Belle update
+		'user_agent_string' => 'Mozilla/5.0 (Symbian/3; Series60/5.3 Nokia701/111.020.0307; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/533.4 (KHTML, like Gecko) NokiaBrowser/7.4.1.14 Mobile Safari/533.4 3gpp-gba',
+		'platform' => 'symbian_series60',
+		'user_agent_name' => 'series60',
+);
 
 //Symbian S40
 $UAs['Nokia X3-02 - S40 OviBrowser/1.0.0.11.8'] = array (
@@ -264,58 +343,6 @@ $UAs['Nokia X3-02 - S40 OviBrowser/1.5.0.34.11'] = array (
 								'user_agent_string' => 'Mozilla/5.0 (Series40; NokiaX3-02/06.00; Profile/MIDP-2.1 Configuration/CLDC-1.1) Gecko/20100401 S40OviBrowser/1.5.0.34.11',
 								'platform' => 'symbian_series40',
 								'user_agent_name' => 'nokia',
-);
-
-//* Nokia devicies on symbian S60
-$UAs['Nokia E75 - OSS Browser 3.2'] = array (
-								'user_agent_string' => 'Mozilla/5.0 (SymbianOS/9.3; U; Series60/3.2 NokiaE75-1/110.48.125 Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko) Safari/413',
-								'platform' => 'symbian_series60',
-								'user_agent_name' => 'series60',
-);
-$UAs['Nokia N97 (v12.0.024) - Browser 7.1'] = array (
-								'user_agent_string' => 'Mozilla/5.0 (SymbianOS/9.4; Series60/5.0 NokiaN97-1/12.0.024; Profile/MIDP-2.1 Configuration/CLDC-1.1; en-us) AppleWebKit/525 (KHTML, like Gecko) BrowserNG/7.1.12344',
-								'platform' => 'symbian_series60',
-								'user_agent_name' => 'series60',
-);
-$UAs['Nokia N8 v13.016 - Browser 7.2'] = array ( //Browser 7.2 is built in browser for Symbian^3 devices. 
-								'user_agent_string' => 'Mozilla/5.0 (Symbian/3; Series60/5.2 NokiaN8-00/013.016; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/525 (KHTML, like Gecko) Version/3.0 BrowserNG/7.2.8.10 3gpp-gba',
-								'platform' => 'symbian_series60',
-								'user_agent_name' => 'series60',
-);
-$UAs['Nokia N8 - Browser 7.3'] = array ( //Browser 7.3 is part of Symbian Anna refresh.
-								'user_agent_string' => 'Mozilla/5.0 (Symbian/3; Series60/5.2 NokiaN8-00/012.002; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/533.4 (KHTML, like Gecko) NokiaBrowser/7.3.0 Mobile Safari/533.4 3gpp-gba',
-								'platform' => 'symbian_series60',
-								'user_agent_name' => 'series60',
-);
-$UAs['Nokia N701 - Browser 7.4'] = array ( //Browser 7.4 is part of Symbian Belle update
-								'user_agent_string' => 'Mozilla/5.0 (Symbian/3; Series60/5.3 Nokia701/111.020.0307; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/533.4 (KHTML, like Gecko) NokiaBrowser/7.4.1.14 Mobile Safari/533.4 3gpp-gba',
-								'platform' => 'symbian_series60',
-								'user_agent_name' => 'series60',
-);
-$UAs['Nokia N90'] = array (
-								'user_agent_string' => 'NokiaN90-1/3.0545.5.1 Series60/2.8 Profile/MIDP-2.0 Configuration/CLDC-1.1',
-								'platform' => 'symbian_series60',
-								'user_agent_name' => 'series60',
-);
-$UAs['Nokia N80'] = array (
-								'user_agent_string' => 'NokiaN80-3/1.0552.0.7Series60/3.0Profile/MIDP-2.0Configuration/CLDC-1.1',
-								'platform' => 'symbian_series60',
-								'user_agent_name' => 'series60',
-);
-$UAs['Nokia7610'] = array (
-								'user_agent_string' => 'Nokia7610/2.0 (5.0509.0) SymbianOS/7.0s Series60/2.1 Profile/MIDP-2.0 Configuration/CLDC-1.0',
-								'platform' => 'symbian_series60',
-								'user_agent_name' => 'series60',
-);
-$UAs['Nokia 5800 XpressMusic (v21.0.025)'] = array (
-								'user_agent_string' => 'Mozilla/5.0 (SymbianOS/9.4; U; Series60/5.0 Nokia5800d-1/21.0.025; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko) Safari/413',
-								'platform' => 'symbian_series60',
-								'user_agent_name' => 'series60',
-);
-$UAs['Nokia3650/1.0'] = array (
-								'user_agent_string' => 'Nokia3650/1.0 SymbianOS/6.1 Series60/1.2 Profile/MIDP-1.0 Configuration/CLDC-1.0',
-								'platform' => 'symbian_series60',
-								'user_agent_name' => 'series60',
 );
 
 //very old nokia devices without symbian
