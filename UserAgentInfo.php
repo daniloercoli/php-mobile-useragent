@@ -15,6 +15,7 @@ class UserAgentInfo {
 	const PLATFORM_J2ME_MIDP		= 'j2me_midp';
 	const PLATFORM_ANDROID 			= 'android';
 	const PLATFORM_ANDROID_TABLET	= 'android_tablet';
+	const PLATFORM_FIREFOX_OS		= 'firefoxOS';
     
 	var $dumb_agents = array( 
 		'nokia', 'blackberry', 'philips', 'samsung', 'sanyo', 'sony', 'panasonic', 'webos', 
@@ -76,6 +77,8 @@ class UserAgentInfo {
 	   		return 'webos';
 	   	elseif ( $this->is_S60_OSSBrowser() )
 	   		return 'series60';
+	   	elseif ( $this->is_firefox_os() )
+		   	return 'firefoxOS';
 	   	elseif ( $this->is_firefox_mobile() )
 	   		return 'firefox_mobile';
 	   	elseif ( $this->is_MaemoTablet() )
@@ -164,6 +167,9 @@ class UserAgentInfo {
    	}
     elseif ( $this->is_J2ME_platform() ) {
    		$this->_platform = self::PLATFORM_J2ME_MIDP;
+   	}
+   	elseif ( $this->is_firefox_os() ) {
+		$this->_platform = self::PLATFORM_FIREFOX_OS;
    	}
    	else
    		$this->_platform = false;
@@ -378,6 +384,25 @@ class UserAgentInfo {
 			return false;
 	}
 
+	
+	/*
+	 * Detects if the current browser is FirefoxOS Native browser
+	 * 
+	 * Mozilla/5.0 (Mobile; rv:14.0) Gecko/14.0 Firefox/14.0
+	 *
+	 */
+	function is_firefox_os( ) {
+	
+		if ( empty( $_SERVER['HTTP_USER_AGENT'] ) )
+			return false;
+	
+		$ua = strtolower( $_SERVER['HTTP_USER_AGENT'] );
+	
+		if ( strpos( $ua, 'mozilla' ) !== false && strpos( $ua, 'mobile' ) !== false && strpos( $ua, 'gecko' ) !== false && strpos( $ua, 'firefox' ) !== false)
+			return true;
+		else
+			return false;
+	}
 	
 	/*
 	 * Detects if the current browser is Opera Mobile

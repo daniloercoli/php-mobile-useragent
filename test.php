@@ -392,6 +392,15 @@ $UAs['Firefox Mobile 2'] = array (
 								'user_agent_name' => 'firefox_mobile',
 );
 
+//FirefoxOS
+$UAs['Firefox OS'] = array (
+		'user_agent_string' => 'Mozilla/5.0 (Mobile; rv:14.0) Gecko/14.0 Firefox/14.0',
+		'platform' => 'firefoxOS',
+		'user_agent_name' => 'firefoxOS',
+);
+
+
+
 foreach ($UAs as $browser_name => $browser_obj) {
 	$_SERVER['HTTP_USER_AGENT']  = $browser_obj['user_agent_string'];
 	$should_print_details = false;
